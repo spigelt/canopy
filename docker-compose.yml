@@ -14,7 +14,7 @@ services:
       - canopy-data:/root/.canopy
     environment:
       - NODE_ENV=${NODE_ENV:-production}
-      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_LEVEL=${LOG_LEVEL:-debug}
     networks:
       - canopy-network
     healthcheck:
@@ -36,6 +36,7 @@ services:
     environment:
       - UPDATE_INTERVAL=${UPDATE_INTERVAL:-3600}
       - REPO_URL=${REPO_URL:-https://github.com/canopy-network/canopy}
+      # tracking main branch from upstream; switch to a personal fork branch if needed
       - BRANCH=${BRANCH:-main}
     networks:
       - canopy-network
