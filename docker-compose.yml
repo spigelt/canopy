@@ -14,7 +14,7 @@ services:
       - canopy-data:/root/.canopy
     environment:
       - NODE_ENV=${NODE_ENV:-production}
-      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_LEVEL=${LOG_LEVEL:-debug}
     networks:
       - canopy-network
     healthcheck:
